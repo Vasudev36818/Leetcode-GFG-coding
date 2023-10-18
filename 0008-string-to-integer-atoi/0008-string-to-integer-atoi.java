@@ -1,9 +1,7 @@
 class Solution {
     public int myAtoi(String s) {
         s = s.strip();
-
-        if (s.isEmpty())
-            return 0;
+        if (s.isEmpty()) return 0;
 
         boolean isNegative = false;
         int i = 0;
@@ -11,9 +9,7 @@ class Solution {
         if (s.charAt(0) == '-') {
             isNegative = true;
             i++;
-        } else if (s.charAt(0) == '+') {
-            i++;
-        }
+        } else if (s.charAt(0) == '+') i++;
 
         long result = 0; 
 
