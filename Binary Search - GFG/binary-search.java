@@ -35,13 +35,10 @@ class Solution {
         while(start<=end)
         {
             mid=(start+end)/2;
+            
             if(arr[mid]==k) return mid;
-            else if(arr[mid]<k){
-               start=mid+1;
-            }
-            else {
-                end=mid-1;
-            }
+            else if(arr[mid]<k)  start=mid+1;
+            else  end=mid-1;
         }
         return -1;
     }
